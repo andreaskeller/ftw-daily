@@ -1,4 +1,5 @@
 import { types as sdkTypes } from './util/sdkLoader';
+import { TRANSITION_REVIEW_2_BY_CUSTOMER } from './util/transaction';
 
 const { LatLng, LatLngBounds } = sdkTypes;
 
@@ -9,38 +10,24 @@ const { LatLng, LatLngBounds } = sdkTypes;
 // `predictionPlace` (util.types.place) properties.
 export default [
   {
-    id: 'default-helsinki',
+    id: 'default-bern',
     predictionPlace: {
-      address: 'Helsinki, Finland',
-      bounds: new LatLngBounds(new LatLng(60.29783, 25.25448), new LatLng(59.92248, 24.78287)),
+      address: 'Bern, Schweiz',
+      bounds: new LatLngBounds(new LatLng(46.99027, 7.49555), new LatLng(46.919033, 7.294318)),
     },
   },
   {
-    id: 'default-turku',
+    id: 'default-zurich',
     predictionPlace: {
-      address: 'Turku, Finland',
-      bounds: new LatLngBounds(new LatLng(60.53045, 22.38197), new LatLng(60.33361, 22.06644)),
+      address: 'Zürich, Schweiz',
+      bounds: new LatLngBounds(new LatLng(47.434662, 8.625334), new LatLng(47.320258, 8.447982)),
     },
   },
   {
-    id: 'default-tampere',
+    id: 'default-lucerne',
     predictionPlace: {
-      address: 'Tampere, Finland',
-      bounds: new LatLngBounds(new LatLng(61.83657, 24.11838), new LatLng(61.42728, 23.5422)),
+      address: 'Luzern, Schweiz',
+      bounds: new LatLngBounds(new LatLng(47.07497, 8.358228), new LatLng(47.015855, 8.212001)),
     },
-  },
-  {
-    id: 'default-oulu',
-    predictionPlace: {
-      address: 'Oulu, Finland',
-      bounds: new LatLngBounds(new LatLng(65.56434, 26.77069), new LatLng(64.8443, 24.11494)),
-    },
-  },
-  {
-    id: 'default-ruka',
-    predictionPlace: {
-      address: 'Ruka, Finland',
-      bounds: new LatLngBounds(new LatLng(66.16997, 29.16773), new LatLng(66.16095, 29.13572)),
-    },
-  },
+  }
 ];

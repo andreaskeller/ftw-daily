@@ -8,56 +8,64 @@ import { requiredFieldArrayCheckbox } from '../../util/validators';
 const formName = 'Styleguide.FieldCheckboxGroup';
 const formNameRequired = 'Styleguide.FieldCheckboxGroupRequired';
 
-const label = <h3>Amenities</h3>;
+const label = <h3>Filmkamera Features</h3>;
 
 const commonProps = {
   label: label,
   options: [
     {
-      key: 'towels',
-      label: 'Towels',
+      key: 'set',
+      label: 'Set',
     },
     {
-      key: 'bathroom',
-      label: 'Bathroom',
+      key: 'audio_input',
+      label: 'Audio Input',
     },
     {
-      key: 'swimming_pool',
-      label: 'Swimming pool',
+      key: 'sdi_output',
+      label: 'SDI Output',
     },
     {
-      key: 'own_drinks',
-      label: 'Own drinks allowed',
+      key: 'hdmi_output',
+      label: 'HDMI Output',
     },
     {
-      key: 'jacuzzi',
-      label: 'Jacuzzi',
+      key: 'image_stabilizer',
+      label: 'Sensor Bildstabilisator',
     },
     {
-      key: 'audiovisual_entertainment',
-      label: 'Audiovisual entertainment',
+      key: 'slowmotion',
+      label: 'Slowmotion 120/240fps',
     },
     {
-      key: 'barbeque',
-      label: 'Barbeque',
+      key: 'raw_recording',
+      label: 'RAW Recording',
     },
     {
-      key: 'own_food_allowed',
-      label: 'Own food allowed',
+      key: 'prores',
+      label: 'ProRes / DNxHR/HD Recording',
+    },
+    {
+      key: '10bit',
+      label: '10 Bit +',
+    },
+    {
+      key: 'action_cam',
+      label: 'Action Cam',
     },
   ],
   twoColumns: true,
 };
 
 const optionalProps = {
-  name: 'amenities-optional',
-  id: 'amenities-optional',
+  name: 'features-optional',
+  id: 'features-optional',
   ...commonProps,
 };
 
 const requiredProps = {
-  name: 'amenities-required',
-  id: `${formNameRequired}.amenities-required`,
+  name: 'features-required',
+  id: `${formNameRequired}.features-required`,
   ...commonProps,
   validate: requiredFieldArrayCheckbox('this is required'),
 };

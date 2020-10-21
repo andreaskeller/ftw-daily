@@ -3,40 +3,48 @@ import { withRouter } from 'react-router-dom';
 import SelectMultipleFilter from './SelectMultipleFilter';
 import { stringify, parse } from '../../util/urlHelpers';
 
-const URL_PARAM = 'pub_amenities';
+const URL_PARAM = 'pub_features';
 
 const options = [
   {
-    key: 'towels',
-    label: 'Towels',
+    key: 'set',
+    label: 'Set',
   },
   {
-    key: 'bathroom',
-    label: 'Bathroom',
+    key: 'audio_input',
+    label: 'Audio Input',
   },
   {
-    key: 'swimming_pool',
-    label: 'Swimming pool',
+    key: 'sdi_output',
+    label: 'SDI Output',
   },
   {
-    key: 'own_drinks',
-    label: 'Own drinks allowed',
+    key: 'hdmi_output',
+    label: 'HDMI Output',
   },
   {
-    key: 'jacuzzi',
-    label: 'Jacuzzi',
+    key: 'image_stabilizer',
+    label: 'Sensor Bildstabilisator',
   },
   {
-    key: 'audiovisual_entertainment',
-    label: 'Audiovisual entertainment',
+    key: 'slowmotion',
+    label: 'Slowmotion 120/240fps',
   },
   {
-    key: 'barbeque',
-    label: 'Barbeque',
+    key: 'raw_recording',
+    label: 'RAW Recording',
   },
   {
-    key: 'own_food_allowed',
-    label: 'Own food allowed',
+    key: 'prores',
+    label: 'ProRes / DNxHR/HD Recording',
+  },
+  {
+    key: '10bit',
+    label: '10 Bit +',
+  },
+  {
+    key: 'action_cam',
+    label: 'Action Cam',
   },
 ];
 
@@ -50,15 +58,15 @@ const AmenitiesFilterPopup = withRouter(props => {
   const { history, location } = props;
 
   const params = parse(location.search);
-  const amenities = params[URL_PARAM];
-  const initialValues = { [URL_PARAM]: !!amenities ? amenities : null };
+  const features = params[URL_PARAM];
+  const initialValues = { [URL_PARAM]: !!features ? features : null };
 
   return (
     <SelectMultipleFilter
       id="SelectMultipleFilterPopupExample"
-      name="amenities"
+      name="features"
       queryParamNames={[URL_PARAM]}
-      label="Amenities"
+      label="Features"
       onSubmit={values => handleSubmit(values, history)}
       showAsPopup={true}
       liveEdit={false}
@@ -79,15 +87,15 @@ const AmenitiesFilterPlain = withRouter(props => {
   const { history, location } = props;
 
   const params = parse(location.search);
-  const amenities = params[URL_PARAM];
-  const initialValues = { [URL_PARAM]: !!amenities ? amenities : null };
+  const features = params[URL_PARAM];
+  const initialValues = { [URL_PARAM]: !!features ? features : null };
 
   return (
     <SelectMultipleFilter
       id="SelectMultipleFilterPlainExample"
-      name="amenities"
+      name="features"
       queryParamNames={[URL_PARAM]}
-      label="Amenities"
+      label="Features"
       onSubmit={values => {
         handleSubmit(values, history);
       }}

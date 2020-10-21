@@ -8,7 +8,7 @@ import { NamedLink } from '../../components';
 
 import css from './SectionLocations.css';
 
-import helsinkiImage from './images/location_helsinki.jpg';
+import bernImage from './images/location_bern.jpg';
 import rovaniemiImage from './images/location_rovaniemi.jpg';
 import rukaImage from './images/location_ruka.jpg';
 
@@ -51,9 +51,9 @@ const SectionLocations = props => {
       </div>
       <div className={css.locations}>
         {locationLink(
-          'Helsinki',
-          helsinkiImage,
-          '?address=Helsinki%2C%20Finland&bounds=60.2978389%2C25.254484899999966%2C59.9224887%2C24.782875800000056&origin=60.16985569999999%2C24.93837910000002'
+          'Bern',
+          bernImage,
+          '?address=Bern%2C%20Kanton%20Bern%2C%20Schweiz&bounds=46.99027%2C7.49555%2C46.919033%2C7.294318'
         )}
         {locationLink(
           'Rovaniemi',

@@ -85,19 +85,22 @@ export const filters = [
       // Note: label is not added through the translation files
       // to make filter customizations a bit easier.
       options: [
-        { key: 'smoke', label: 'Smoke' },
-        { key: 'electric', label: 'Electric' },
-        { key: 'wood', label: 'Wood' },
-        { key: 'other', label: 'Other' },
+        { key: 'cameras', label: 'Kameras' },
+        { key: 'lenses', label: 'Objektive und Zubehör' },
+        { key: 'camera-accessories', label: 'Kamerazubehör' },
+        { key: 'camerasupport', label: 'Kamerasupport' },
+        { key: 'lighting-grip', label: 'Licht und Grip' },
+        { key: 'audio', label: 'Audio' },
+        
       ],
     },
   },
   {
-    id: 'amenities',
-    label: 'Amenities',
+    id: 'features',
+    label: 'Film- und Fotokamera Features',
     type: 'SelectMultipleFilter',
     group: 'secondary',
-    queryParamNames: ['pub_amenities'],
+    queryParamNames: ['pub_features'],
     config: {
       // Optional modes: 'has_all', 'has_any'
       // https://www.sharetribe.com/api-reference/marketplace.html#extended-data-filtering
@@ -109,36 +112,44 @@ export const filters = [
       // to make filter customizations a bit easier.
       options: [
         {
-          key: 'towels',
-          label: 'Towels',
+          key: 'set',
+          label: 'Set',
         },
         {
-          key: 'bathroom',
-          label: 'Bathroom',
+          key: 'audio_input',
+          label: 'Audio Input',
         },
         {
-          key: 'swimming_pool',
-          label: 'Swimming pool',
+          key: 'sdi_output',
+          label: 'SDI Output',
         },
         {
-          key: 'own_drinks',
-          label: 'Own drinks allowed',
+          key: 'hdmi_output',
+          label: 'HDMI Output',
         },
         {
-          key: 'jacuzzi',
-          label: 'Jacuzzi',
+          key: 'image_stabilizer',
+          label: 'Sensor Bildstabilisator',
         },
         {
-          key: 'audiovisual_entertainment',
-          label: 'Audiovisual entertainment',
+          key: 'slowmotion',
+          label: 'Slowmotion 120/240fps',
         },
         {
-          key: 'barbeque',
-          label: 'Barbeque',
+          key: 'raw_recording',
+          label: 'RAW Recording',
         },
         {
-          key: 'own_food_allowed',
-          label: 'Own food allowed',
+          key: 'prores',
+          label: 'ProRes / DNxHR/HD Recording',
+        },
+        {
+          key: '10bit',
+          label: '10 Bit +',
+        },
+        {
+          key: 'action_cam',
+          label: 'Action Cam',
         },
       ],
     },

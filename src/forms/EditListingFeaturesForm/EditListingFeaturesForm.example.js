@@ -7,11 +7,11 @@ const initialValues = { [NAME]: initialValueArray };
 
 const filterConfig = [
   {
-    id: 'amenities',
+    id: 'features',
     label: 'Amenities',
     type: 'SelectMultipleFilter',
     group: 'secondary',
-    queryParamNames: ['pub_amenities'],
+    queryParamNames: ['pub_features'],
     config: {
       mode: 'has_all',
       options: [
